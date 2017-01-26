@@ -67,9 +67,12 @@ class Dog(Animal):
         self.__name = name
         super(Dog, self).__init__(name= self.__name, sound = self.__sound)
 
+    def toString(self):
+        return "{} is making a sound {} as it's a dog".format(self.__name, self.__sound)
 
 dog = Dog("Bot")
 print (dog.toString())
+
 
 
 os.remove("test.txt")

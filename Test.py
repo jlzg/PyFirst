@@ -30,5 +30,27 @@ def testURL():
         for word in story_words:
             print (word.decode("utf-8"))
 
+
+def func():
+    x = map(max, [1, 2, 3], [4, 2, 1])
+    print(x)
+
+
+def create_adder(x):
+    def adder(y):
+        return x + y
+
+    return adder
+
+add_10 = create_adder(10)
+
+##func()
+##map(max, [1, 2, 3], [4, 2, 1])
+x = map(add_10, [1, 2, 3])
+y= filter(lambda x: x > 5, [3, 4, 5, 6, 7])
+m = [add_10(i) for i in [1, 2, 3]]
+print(y)
+print(m)
+
 #main()
 #testURL()
